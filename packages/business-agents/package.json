@@ -1,0 +1,62 @@
+{
+  "name": "@miyabi/business-agents",
+  "version": "0.1.0",
+  "description": "Business Strategy & Marketing Agents for Miyabi - 14 specialized agents for business operations",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./strategy": {
+      "import": "./dist/strategy/index.js",
+      "types": "./dist/strategy/index.d.ts"
+    },
+    "./marketing": {
+      "import": "./dist/marketing/index.js",
+      "types": "./dist/marketing/index.d.ts"
+    },
+    "./sales": {
+      "import": "./dist/sales/index.js",
+      "types": "./dist/sales/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "business",
+    "agents",
+    "strategy",
+    "marketing",
+    "sales",
+    "ai",
+    "automation"
+  ],
+  "author": "Miyabi Team",
+  "license": "MIT",
+  "dependencies": {
+    "miyabi-agent-sdk": "^0.1.0-alpha.2",
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@octokit/rest": "^21.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShunsukeHayashi/Miyabi.git",
+    "directory": "packages/business-agents"
+  }
+}

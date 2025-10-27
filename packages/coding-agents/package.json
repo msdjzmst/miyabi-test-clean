@@ -1,0 +1,90 @@
+{
+  "name": "@miyabi/coding-agents",
+  "version": "0.1.0",
+  "description": "Coding Agents for Miyabi - 7 specialized agents for development automation",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./coordinator": {
+      "import": "./dist/coordinator/coordinator-agent.js",
+      "types": "./dist/coordinator/coordinator-agent.d.ts"
+    },
+    "./codegen": {
+      "import": "./dist/codegen/codegen-agent.js",
+      "types": "./dist/codegen/codegen-agent.d.ts"
+    },
+    "./review": {
+      "import": "./dist/review/review-agent.js",
+      "types": "./dist/review/review-agent.d.ts"
+    },
+    "./deployment": {
+      "import": "./dist/deployment/deployment-agent.js",
+      "types": "./dist/deployment/deployment-agent.d.ts"
+    },
+    "./issue": {
+      "import": "./dist/issue/issue-agent.js",
+      "types": "./dist/issue/issue-agent.d.ts"
+    },
+    "./pr": {
+      "import": "./dist/pr/pr-agent.js",
+      "types": "./dist/pr/pr-agent.d.ts"
+    },
+    "./base-agent": {
+      "import": "./dist/base-agent.js",
+      "types": "./dist/base-agent.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "coding",
+    "agents",
+    "automation",
+    "ai",
+    "development",
+    "code-generation",
+    "code-review",
+    "deployment"
+  ],
+  "author": "Miyabi Team",
+  "license": "MIT",
+  "dependencies": {
+    "@miyabi/shared-utils": "workspace:*",
+    "miyabi-agent-sdk": "^0.1.0-alpha.2",
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@octokit/rest": "^21.0.2",
+    "chalk": "^5.3.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShunsukeHayashi/Miyabi.git",
+    "directory": "packages/coding-agents"
+  }
+}

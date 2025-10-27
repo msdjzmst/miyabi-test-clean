@@ -1,0 +1,38 @@
+{
+  "name": "@agentic-os/github-projects",
+  "version": "1.0.0",
+  "description": "GitHub Projects V2 API SDK for Agentic OS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "keywords": [
+    "github",
+    "projects",
+    "graphql",
+    "sdk",
+    "api"
+  ],
+  "author": "Agentic OS Team",
+  "license": "MIT",
+  "dependencies": {
+    "@miyabi/agent-sdk": "workspace:*",
+    "@octokit/graphql": "^7.0.2",
+    "@octokit/rest": "^20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

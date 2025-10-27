@@ -1,0 +1,33 @@
+{
+  "name": "@miyabi/shared-utils",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./retry": {
+      "types": "./dist/retry.d.ts",
+      "default": "./dist/retry.js"
+    },
+    "./api-client": {
+      "types": "./dist/api-client.d.ts",
+      "default": "./dist/api-client.js"
+    },
+    "./async-file-writer": {
+      "types": "./dist/async-file-writer.d.ts",
+      "default": "./dist/async-file-writer.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

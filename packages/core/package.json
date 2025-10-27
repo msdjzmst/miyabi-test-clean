@@ -1,0 +1,50 @@
+{
+  "name": "@agentic-os/core",
+  "version": "0.1.0",
+  "description": "Core agent system for Agentic OS - Autonomous development framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./agents": "./dist/agents/index.js",
+    "./types": "./dist/types/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "autonomous",
+    "github",
+    "automation"
+  ],
+  "author": "Agentic OS Team",
+  "license": "MIT",
+  "dependencies": {
+    "@miyabi/coding-agents": "workspace:*",
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@octokit/rest": "^20.0.0",
+    "@octokit/graphql": "^7.0.2",
+    "chalk": "^5.3.0",
+    "ora": "^9.0.0",
+    "cli-table3": "^0.6.5",
+    "boxen": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShunsukeHayashi/Autonomous-Operations.git",
+    "directory": "packages/core"
+  }
+}
