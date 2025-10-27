@@ -1,0 +1,7 @@
+
+# Miyabi
+.miyabi.yml
+.worktrees/
+logs/
+reports/
+*.log
