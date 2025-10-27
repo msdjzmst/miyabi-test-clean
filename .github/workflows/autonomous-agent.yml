@@ -137,6 +137,9 @@ jobs:
           BRANCH_NAME="agent/issue-${{ needs.check-trigger.outputs.issue_number }}-$(date +%s)"
           git checkout -b "$BRANCH_NAME"
 
+          # Remove .env to prevent secrets from being committed
+          rm -f .env
+
           git add .
           git commit -m "$(cat <<'EOF'
           feat: autonomous agent implementation for issue #${{ needs.check-trigger.outputs.issue_number }}
