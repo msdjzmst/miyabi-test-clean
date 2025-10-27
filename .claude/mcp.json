@@ -1,0 +1,79 @@
+{
+  "mcpServers": {
+    "ide-integration": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/ide-integration.cjs"
+      ],
+      "timeout": 120000,
+      "disabled": false,
+      "description": "VS Code diagnostics and Jupyter execution integration"
+    },
+    "github-enhanced": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/github-enhanced.cjs"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "REPOSITORY": "${REPOSITORY}"
+      },
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Enhanced GitHub operations for Issue/PR management"
+    },
+    "project-context": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/project-context.cjs"
+      ],
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Project-specific context and dependency information"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Filesystem access for project files"
+    },
+    "context-engineering": {
+      "command": "node",
+      "args": [
+        "external/context-engineering-mcp/mcp-server/index.js"
+      ],
+      "env": {
+        "AI_GUIDES_API_URL": "http://localhost:8888"
+      },
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Context Engineering - AI-powered context analysis, optimization, and semantic search"
+    },
+    "miyabi": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/miyabi-integration.js"
+      ],
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Miyabi CLI統合 - プロジェクト作成、Agent実行、自動化機能"
+    },
+    "gemini-image-generation": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/image-generation.js"
+      ],
+      "env": {
+        "GOOGLE_API_KEY": "${GOOGLE_API_KEY}"
+      },
+      "timeout": 120000,
+      "disabled": false,
+      "description": "Gemini 2.5 Flash Image - テキストから画像生成（note.com記事用）"
+    }
+  }
+}
