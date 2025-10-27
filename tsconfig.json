@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@miyabi/coding-agents": ["./packages/coding-agents"],
+      "@miyabi/coding-agents/*": ["./packages/coding-agents/*"],
+      "@miyabi/business-agents": ["./packages/business-agents/src"],
+      "@miyabi/business-agents/*": ["./packages/business-agents/src/*"],
+      "@miyabi/shared-utils": ["./packages/shared-utils/src"],
+      "@miyabi/shared-utils/*": ["./packages/shared-utils/src/*"]
+    },
+    "baseUrl": "."
+  },
+  "include": [
+    "scripts/**/*",
+    "utils/**/*",
+    "tests/**/*",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/__tests__/**",
+    "**/*.d.ts",
+    "**/*.js",
+    "**/*.js.map"
+  ],
+  "references": [
+    { "path": "./packages/coding-agents" },
+    { "path": "./packages/business-agents" },
+    { "path": "./packages/core" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/shared-utils" }
+  ]
+}
